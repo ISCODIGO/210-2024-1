@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pruebagui.HelloController">
    <center>
-      <Canvas fx:id="canvas" height="350.0" onMouseClicked="#mouseClic" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" width="350.0" BorderPane.alignment="CENTER" />
+      <Canvas fx:id="canvas" height="350.0" onMouseClicked="#mouseClick" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" width="350.0" BorderPane.alignment="CENTER" />
    </center>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" spacing="5.0" BorderPane.alignment="CENTER_LEFT">
+         <Label text="Puntos:" />
+         <Label fx:id="puntos" text="Label" />
+         <Button fx:id="fijarClick" mnemonicParsing="false" text="Fijar" />
+         <Button fx:id="reiniciarClick" mnemonicParsing="false" text="Reiniciar" />
+      </HBox>
+   </bottom>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label>Numero de lados:</Label>
+            <Slider fx:id="slider" max="12" min="3" />
+            <Label fx:id="ladoLabel" text="Label" />
+         </children>
+      </HBox>
+   </top>
 </BorderPane>
