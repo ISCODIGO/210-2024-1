@@ -32,7 +32,7 @@ public class LoginView {
 
     public void changeScene(Stage stage, String sceneName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(sceneName));
-        Scene scene = new Scene(fxmlLoader.load(), 400, 400);
+        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
         stage.setScene(scene);
     }
 
